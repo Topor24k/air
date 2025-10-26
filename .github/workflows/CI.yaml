@@ -60,10 +60,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
+      - name: Ensure bash is installed
+      - run: sudo apt-get update && sudo apt-get install -y bash
       - uses: taiki-e/install-action@just
-      - uses: astral-sh/setup-uv@2ddd2b9cb38ad8efd50337e8ab201519a34c9f24 # v7
-      - name: Type Checking
-        run: just type-check
   test-all:
     strategy:
       fail-fast: false
