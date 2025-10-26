@@ -1,6 +1,7 @@
 """Tools for building layouts and several simple layouts for quick prototyping."""
 
-from typing import Any, Iterable
+from collections.abc import Iterable
+from typing import Any
 
 from .tags import Body, Children, Head, Header, Html, Link, Main, Script, Style
 from .tags.types import HEAD_TAG_TYPES, AttributesType
